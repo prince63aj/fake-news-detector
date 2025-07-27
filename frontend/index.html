@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NewsVerify</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="body">
+
+        <nav class="navbar">
+            <div class="left">
+                <div class="logo">📰 NewsVerify</div>
+                <ul class="nav-links">
+                    <li><a href="">Home</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </div>
+            <div class="auth-buttons">
+                <a href="/frontend/login.html"><button class="btn login">Login</button></a>
+                <a href="/frontend/sign-up.html"><button class="btn signup">Signup</button></a>
+            </div>
+        </nav>
+
+
+        <div class="container">
+            <h1>📰 Fake News Detection</h1>
+            <textarea id="newsText" placeholder="Paste the news article here..."></textarea>
+            <button onclick="checkNews()">Check News</button>
+            <div id="result"></div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
