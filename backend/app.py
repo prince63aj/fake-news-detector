@@ -3,6 +3,7 @@ import pickle
 import re
 from flask_cors import CORS
 import string
+import os  # <-- Needed for getting PORT
 
 # Load model and vectorizer
 with open("models/model.pkl", "rb") as model_file:
@@ -54,6 +55,7 @@ def predict():
 def home():
     return "✅ Fake News Detection Backend is running."
 
-# Start the server
+# Start the server (Render-compatible)
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Use Render's PORT or 5000 locally
+    app.run(host="0.0.0.0", port=port)
